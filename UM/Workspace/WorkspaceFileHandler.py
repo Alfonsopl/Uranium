@@ -71,3 +71,7 @@ class WorkspaceFileHandler(FileHandler):
 
             self._application.getWorkspaceMetadataStorage().setAllData(metadata)
             self._application.workspaceLoaded.emit(cast(WorkspaceReader, self.workspace_reader).workspaceName())
+
+        #BCN3D IDEX INCLUSION
+        from cura.Utils.BCN3Dutils.Bcn3dIdexSupport import applyPrintMode
+        applyPrintMode()
