@@ -83,8 +83,8 @@ class ReadFileJob(Job):
             Logger.log("d", "Loading file took %0.1f seconds", end_time - begin_time)
 
             #BCN3D IDEX INCLUSION
-            from cura.Utils.BCN3Dutils.Bcn3dIdexSupport import PrintModeManager
-            PrintModeManager.getInstance().checkSTLScene(self._filename, self._loading_message)
+            from cura.Utils.BCN3Dutils.Bcn3dIdexSupport import checkSTLScene
+            checkSTLScene(self._filename, self._loading_message)
 
             self._loading_message.hide()
             if reader.emptyFileHintSet():

@@ -53,7 +53,7 @@ class Application:
         :param build_type: Additional version info on the type of build this is, such as "master".
         :param is_debug_mode: Whether to run in debug mode.
         """
-
+        Logger.log("i", "Creating singleton Alfonso's STRATOS")
         if Application.__instance is not None:
             raise RuntimeError("Try to create singleton '%s' more than once" % self.__class__.__name__)
 
